@@ -40,7 +40,11 @@ def chug_it(project_name):
     print 'creating Project ' + project_name
     path = os.path.dirname(os.path.realpath(__file__))
     components = path.split(os.sep)
-    path = str.join(os.sep, components[:components.index("kegger-0.4.1-py2.7.egg")+1])
+    for i, s in enumerate(components):
+        if 'kegger-' in s:
+            keg_index = s
+    path = str.join(os.sep, components[:components.index(keg_index)+1])
+    print path
     path_from = path + os.sep + "kegger" + os.sep + "myapp"
     print 'scaffolding, please wait'
     path_to = os.getcwd() + '\\Project_' + project_name
