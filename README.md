@@ -1,31 +1,31 @@
-KEGGER
+#KEGGER
 ======
 
 Flask on Google AppEngine
 
 
-How To Use
-==========
-WINDOWS
+##How To Use
+=============
+###WINDOWS
 
+-------------
+###UBUNTU (TO DO)
+(if you get -bash: unzip: command not found then sudo apt-get install unzip) <br />
 
-UBUNTU (TO DO)
-(if you get -bash: unzip: command not found then sudo apt-get install unzip)
+Installation <br />
+step 1 enter: <br />
+/home# unzip file.zip -d destination_folder <br />
 
-Installation
-step 1 enter:
-/home# unzip file.zip -d destination_folder
+step 2 enter: <br />
+/home# cd kegger-master <br />
 
-step 2 enter:
-/home# cd kegger-master
+step 3 enter: <br />
+/home# python setup.py install <br />
 
-step 3 enter:
-/home# python setup.py install
+That's it! If it installed, congratulations! <br />
 
-That's it! If it installed, congratulations!
+Checking Version <br />
+/home# kegger.py -v <br />
 
-Checking Version
-/home# kegger.py -v
-
-Creating Project
-/home# kegger.py WhalePopulationCount
+Creating Project <br />
+/home# kegger.py WhalePopulationCount <br />
