@@ -13,11 +13,11 @@ def read(fname):
 
 setup(
     name = "Kegger",
-    version = "0.4.1",
+    version = "0.4.2",
     author = "Jonathan Ho",
     author_email = "sabahgamemaker@gmail.com",
     description = ("Framework for Flask on GAE aka Kegger because a Keg is like a bunch of Flask"),
-    license = "Common Creative 3.0",
+    license = "Common Creative 1.0",
     keywords = "Framework GoogleAppEngine Flask",
     url = "http://www.gamesbrewer.com/kegger",
     packages=find_packages(),
@@ -25,8 +25,8 @@ setup(
     include_package_data=True,
     long_description=read('README.txt'),
     classifiers=[
-        "Development Status :: 0.4.1 - Beta",
+        "Development Status :: 0.4.2 - Beta",
         "Topic :: Utilities",
-        "License :: OSI Approved :: Common Creative 3.0",
+        "License :: OSI Approved :: Common Creative 1.0",
     ],
 )

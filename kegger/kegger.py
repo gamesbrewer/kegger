@@ -17,7 +17,7 @@ def tap_bunghole():
         opts, args = getopt.getopt(sys.argv[1:], 'ho:v', ['help', 'output='])
     except getopt.GetoptError as err:
         print str(err)
-        print 'example python kegger.py -o <project name>'
+        print 'example kegger.py -o <project name>'
         sys.exit(2)
     if opts:
         for opt, arg in opts:
@@ -27,7 +27,7 @@ def tap_bunghole():
                 print '-v                 : kegger version'
                 sys.exit()
             elif opt == '-v':
-                print 'Kegger 0.3'
+                print 'Kegger 0.4.2'
                 sys.exit()
             elif opt in ('-o', '--output'):
                 chug_it(arg)
