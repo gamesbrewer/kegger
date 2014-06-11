@@ -17,7 +17,7 @@ def tap_bunghole():
         opts, args = getopt.getopt(sys.argv[1:], 'ho:v', ['help', 'output='])
     except getopt.GetoptError as err:
         print str(err)
-        print 'example kegger.py -o <project name>'
+        print 'example kegger.py <project name>'
         sys.exit(2)
     if opts:
         for opt, arg in opts:
@@ -39,40 +39,42 @@ def chug_it(project_name):
     #first create the folder
     print 'creating Project ' + project_name
     path = os.path.dirname(os.path.realpath(__file__))
-    components = path.split(os.sep)
+    components = path.split(os.path.sep)
     for i, s in enumerate(components):
-        if 'kegger-' in s:
+        if 'kegger-' in s.lower():
             keg_index = s
-    path = str.join(os.sep, components[:components.index(keg_index)+1])
-    print path
-    path_from = path + os.sep + "kegger" + os.sep + "myapp"
-    print 'scaffolding, please wait'
-    path_to = os.getcwd() + '\\Project_' + project_name
+    path = str.join(os.path.sep, components[:components.index(keg_index)+1])
+    path_from = path + os.path.sep + "kegger" + os.path.sep + "myapp"
+    path_to = os.getcwd() + os.path.sep + 'Project_' + project_name
+    print path_from
+    print path_to
+#    sys.exit(2)
     copy_tree(path_from, path_to)
 
     #update yaml and main
     #first part update application name. it has to be lowercase only in GAE
-    fileToSearch = path_to + '\\app.yaml'
+    print 'scaffolding, please wait'
+    fileToSearch = path_to + os.path.sep + 'app.yaml'
     for line in fileinput.input(fileToSearch, inplace=True):
         print(line.replace('application: myappname', 'application: ' + project_name.lower())),
     #second part update whatever else
-    fileToSearch = path_to + '\\app.yaml'
+    fileToSearch = path_to + os.path.sep + 'app.yaml'
     for line in fileinput.input(fileToSearch, inplace=True):
         print(line.replace('myappname', project_name)),
-    fileToSearch = path_to + '\\main.py'
+    fileToSearch = path_to + os.path.sep + 'main.py'
     for line in fileinput.input(fileToSearch, inplace=True):
         print(line.replace('myappname', project_name)),
 
     #next rename the app
-    path_from = path_to + '\\myappname'
-    path_to = path_to + '\\' + project_name
+    path_from = path_to + os.path.sep + 'myappname'
+    path_to = path_to + os.path.sep + project_name
     os.rename(path_from, path_to)
 
     #update apps and models
-    fileToSearch = path_to + '\\apps.py'
+    fileToSearch = path_to + os.path.sep + 'apps.py'
     for line in fileinput.input(fileToSearch, inplace=True):
         print(line.replace('myappname', project_name)),
-    fileToSearch = path_to + '\\models.py'
+    fileToSearch = path_to + os.path.sep + 'models.py'
     user_model = project_name + '_User'
     for line in fileinput.input(fileToSearch, inplace=True):
         print(line.replace('MyAppName_User', user_model)),
