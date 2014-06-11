@@ -6,6 +6,13 @@ Flask <br />
 Bottle *To be Done <br />
 CherryPy *To be Done <br />
 
+##Pre-Requisites
+=============
+1. Python 2.7 <br />
+Get it here https://www.python.org/download/releases/2.7 <br />
+
+2. Google App Engine SDK <br />
+Get it here https://developers.google.com/appengine/downloads <br />
 
 ##How To Use
 =============
@@ -59,7 +66,6 @@ Creating Project <br />
 1. Add switcher for webframeworks. eg. kegger.py  -o WhalePopulationCount -f Grok (to create Project WhalePopulationCount using Grok framework) <br />
 2. Frameworks to be added Grok, Pyramid, Glasshammer, Pylatte, Watson, Bottle, CherryPy. Obviously some runs on only 3.x so....
 3. Currently 2.7 compliant. Need to make it 3.x compliant.
-4. To be added. Pirates forever!  >:D
 
 
 
