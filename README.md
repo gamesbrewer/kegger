@@ -49,3 +49,15 @@ Checking Version <br />
 Creating Project <br />
 /home# kegger.py WhalePopulationCount <br />
 (This will create /home/Project_WhalePopulationCount# directory with everything you need in it) 
+
+
+##TODO, WISHLIST, AND STUFF
+=============
+1. Add switcher for webframeworks. eg. kegger.py  -o WhalePopulationCount -f Grok (to create Project WhalePopulationCount using Grok framework) <br />
+2. Frameworks to be added Grok, Pyramid, Glasshammer, Pylatte, Watson, Bottle, CherryPy. Obviously some runs on only 3.x so....
+3. Currently 2.7 compliant. Need to make it 3.x compliant.
+4. To be added. Pirates forever!  >:D
+
+
+
+
