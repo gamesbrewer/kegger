@@ -3,7 +3,7 @@
 
 Use your Favourite Python Frameworks on Google AppEngine <br />
 Flask <br />
-Bottle *To be Done <br />
+Bottle <br />
 CherryPy *To be Done <br />
 
 ##Pre-Requisites
@@ -33,7 +33,7 @@ Checking Version <br />
 C:\>kegger.py -v <br />
 
 Creating Project <br />
-C:\>kegger.py WhalePopulationCount <br />
+C:\>kegger.py WhalePopulationCount -f bottle<br />
 (This will create C:\>Project_WhalePopulationCount folder with everything you need in it) <br />
 
 -------------
@@ -57,7 +57,7 @@ Checking Version <br />
 /home# kegger.py -v <br />
 
 Creating Project <br />
-/home# kegger.py WhalePopulationCount <br />
+/home# kegger.py WhalePopulationCount -f bottle <br />
 (This will create /home/Project_WhalePopulationCount# directory with everything you need in it) 
 
 
