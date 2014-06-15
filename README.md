@@ -2,8 +2,7 @@
 ======
 
 Use your Favourite Python Frameworks on Google AppEngine <br />
-Flask <br />
-Bottle <br />
+Flask, Bottle <br />
 CherryPy *To be Done <br />
 
 ##Pre-Requisites
