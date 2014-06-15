@@ -62,7 +62,7 @@ Creating Project <br />
 
 ##TODO, WISHLIST, AND STUFF
 =============
-1. Add switcher for webframeworks. eg. kegger.py  -o WhalePopulationCount -f Grok (to create Project WhalePopulationCount using Grok framework) <br />
+1. Add switcher for templates. eg. kegger.py WhalePopulationCount -f Grok -t Mako (to create Project WhalePopulationCount using Grok framework and Mako template) <br />
 2. Frameworks to be added Grok, Pyramid, Glasshammer, Pylatte, Watson, Bottle, CherryPy. Obviously some runs on only 3.x so....
 3. Currently 2.7 compliant. Need to make it 3.x compliant.
 
