@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyAppName &mdash; MyAppName Ver1.0</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="{{ url_for('static', filename='dashboard/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dashboard/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="{{ url_for('static', filename='dashboard/css/plugins/morris/morris-0.4.3.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dashboard/css/plugins/timeline/timeline.css') }}" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="{{ url_for('static', filename='dashboard/css/sb-admin.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./Dashboard">MyAppName Admin v1.0</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Chat with Wife</strong>
+                                        <span class="pull-right text-muted">in 4 hours</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                                            <span class="sr-only">10% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Interview Sam Neil</strong>
+                                        <span class="pull-right text-muted">in 2:35 hours</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Interview Max Kong</strong>
+                                        <span class="pull-right text-muted">in 1:25 hours</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Interview Alice Chia</strong>
+                                        <span class="pull-right text-muted">in 0:45 hours</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Interview Chris Rock</strong>
+                                        <span class="pull-right text-muted">Completed</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                            <span class="sr-only">100% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Events</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+				<!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Event
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa  fa-tasks fa-fw"></i> Event Notified
+                                    <span class="pull-right text-muted small">1 hour 10 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa  fa-tasks fa-fw"></i> Event Notified
+                                    <span class="pull-right text-muted small">1 hour 55 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa  fa-tasks fa-fw"></i> Event Notified
+                                    <span class="pull-right text-muted small">2 hour 30 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Event Completed
+                                    <span class="pull-right text-muted small">43 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">11:32 AM</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-bolt fa-fw"></i> Server Crashed!
+                                    <span class="pull-right text-muted small">11:13 AM</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                    <span class="pull-right text-muted small">10:57 AM</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa  fa-tasks fa-fw"></i> Event Notified
+                                    <span class="pull-right text-muted small">9:49 AM</span>
+                                </div>
+                            </a>
+                        </li>
+						<li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Event
+                                    <span class="pull-right text-muted small">Yesterday</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Notifications</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/Sign-Out"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="./Dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard - Your Status (Online)</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-clock-o fa-fw"></i> Today's Schedule
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Chat with Wife</h4>
+                                            <p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>4 hours to go</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Sked some time for wifey's daily video call.</p>
+											<hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Update</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Cancel</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge info"><i class="fa fa-video-camera"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Interview Sam Neil</h4>
+											<p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>in 2 hours 35 minutes</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Sked applicant Sam Neil for position of Accounts Executive</p>
+											<hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Update</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Cancel</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+								
+								<li>
+                                    <div class="timeline-badge warning"><i class="fa fa-video-camera"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Interview Max Kong</h4>
+											<p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>in 1 hours 25 minutes</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Sked applicant Max Kong for position of Branch Manager in Hong Kong</p>
+											<hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Update</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Cancel</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+								<li class="timeline-inverted">
+                                    <div class="timeline-badge warning"><i class="fa fa-video-camera"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Interview Alice Chia</h4>
+											<p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>in 45 minutes</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Sked applicant Max Kong for position of Branch Manager in Hong Kong</p>
+											<hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-cog"></i> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Update</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Cancel</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+								<li>
+                                    <div class="timeline-badge success"><i class="fa fa-thumbs-up"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Interview Chris Rock</h4>
+											<p>
+                                                <small class="text-muted"><i class="fa fa-time"></i>Completed</small>
+                                            </p>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Sked applicant Sam Neil for position of Accounts Executive</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-group fa-fw"></i>Contacts <a href="new_contacts.html"><i class="fa fa-plus-circle fa-fw"></i></a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user fa-fw"></i> Ali Baba
+                                    <span class="pull-right text-muted small">Online
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-ellipsis-h fa-fw"></i> Isaac Isamov
+                                    <span class="pull-right text-muted small"><em>Offline</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-ellipsis-h fa-fw"></i> Roy Rogers
+                                    <span class="pull-right text-muted small"><em>Offline</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user fa-fw"></i> Michaelangelo
+                                    <span class="pull-right text-muted small">Online
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-ellipsis-h fa-fw"></i> Donatello
+                                    <span class="pull-right text-muted small"><em>Offline</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-ellipsis-h fa-fw"></i> Raphael
+                                    <span class="pull-right text-muted small"><em>Offline</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-user fa-fw"></i> Bernardino
+                                    <span class="pull-right text-muted small">Online
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" class="btn btn-default btn-block">View All Contacts</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="{{ url_for('static', filename='dashboard/js/jquery-1.10.2.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="{{ url_for('static', filename='dashboard/js/plugins/morris/raphael-2.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard/js/plugins/morris/morris.js') }}"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="{{ url_for('static', filename='dashboard/js/sb-admin.js') }}"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="{{ url_for('static', filename='dashboard/js/demo/dashboard-demo.js') }}"></script>
+
+</body>
+
+</html>

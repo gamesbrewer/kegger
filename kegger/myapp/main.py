@@ -1,5 +1,4 @@
-import os
-import sys
+import os, sys
 
 sys.path.insert(1, os.path.join(os.path.abspath('.'), 'libs'))
 
