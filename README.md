@@ -1,8 +1,10 @@
 #KEGGER
 ======
 
+##Version 0.6.0
+
 Use your Favourite Python Frameworks on Google AppEngine <br />
-Flask, Bottle <br />
+Flask, Bottle, Pyramid <br />
 CherryPy *To be Done <br />
 
 ##Pre-Requisites
@@ -32,7 +34,7 @@ Checking Version <br />
 C:\>kegger.py -v <br />
 
 Creating Project <br />
-C:\>kegger.py WhalePopulationCount -f bottle<br />
+C:\>kegger.py WhalePopulationCount -f pyramid <br />
 (This will create C:\>Project_WhalePopulationCount folder with everything you need in it) <br />
 
 -------------
@@ -56,14 +58,14 @@ Checking Version <br />
 /home# kegger.py -v <br />
 
 Creating Project <br />
-/home# kegger.py WhalePopulationCount -f bottle <br />
+/home# kegger.py WhalePopulationCount -f pyramid <br />
 (This will create /home/Project_WhalePopulationCount# directory with everything you need in it) 
 
 
 ##TODO, WISHLIST, AND STUFF
 =============
 1. Add switcher for templates. eg. kegger.py WhalePopulationCount -f Grok -t Mako (to create Project WhalePopulationCount using Grok framework and Mako template) <br />
-2. Frameworks to be added Grok, Pyramid, Glasshammer, Pylatte, Watson, Bottle, CherryPy. Obviously some runs on only 3.x so....
+2. Frameworks to be added Grok, Glasshammer, Pylatte, Watson, Bottle, CherryPy. Obviously some runs on only 3.x so....
 3. Currently 2.7 compliant. Need to make it 3.x compliant.
 
 

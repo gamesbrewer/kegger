@@ -9,7 +9,7 @@ import fileinput
 
 import kegger
 
-frameworks = ['flask', 'cherrypy', 'bottle']
+frameworks = ['flask', 'bottle', 'pyramid', 'cherrypy']
 framework = ''
 
 '''
@@ -29,7 +29,7 @@ def tap_bunghole():
 
     if sys.argv[1].startswith('-'):
         try:
-            opts, args = getopt.getopt(sys.argv[1:], 'hf:v', ['help', 'framework=', 'version'])
+            opts, args = getopt.getopt(sys.argv[1:], 'hlf:v', ['help', 'list', 'framework=', 'version'])
             brix_check(opts)
             project_name = sys.argv[1]
         except getopt.GetoptError as err:
@@ -38,7 +38,7 @@ def tap_bunghole():
         project_name = sys.argv[1]
         if len(sys.argv) > 2:
             try:
-                opts, args = getopt.getopt(sys.argv[2:], 'hf:v', ['help', 'framework=', 'version'])
+                opts, args = getopt.getopt(sys.argv[2:], 'hlf:v', ['help', 'list', 'framework=', 'version'])
             except getopt.GetoptError as err:
                 print print_error(err)
             brix_check(opts)
@@ -59,7 +59,11 @@ def brix_check(options):
                 print 'valid frameworks are', frameworks
                 sys.exit()
         elif opt in ('-v', '--version'):
-            print 'Kegger 0.5.0'
+            print 'Kegger 0.6.0'
+            sys.exit()
+        elif opt in ('-l', '--list'):
+            print 'Frameworks Available : '
+            print ', '.join(str(p) for p in frameworks) 
             sys.exit()
 
 def chug_it(project_name, framework_name):

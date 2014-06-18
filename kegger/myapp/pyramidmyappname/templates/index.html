@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="googlebot" content="index,follow">
+	
+    <!-- Title -->
+    <title>SkedChat &mdash; Scheduled Web Chat</title>
+
+    <!-- Templates core CSS -->
+    <link href="{{ url_for('static', filename='stylesheets/application.css') }}" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='images/favicon/favicon.png') }}" rel="shortcut icon">
+    <link href="{{ url_for('static', filename='images/favicon/apple-touch-icon-57-precomposed.png') }}" rel="apple-touch-icon">
+    <link href="{{ url_for('static', filename='images/favicon/apple-touch-icon-72-precomposed.png') }}" rel="apple-touch-icon" sizes="72x72">
+    <link href="{{ url_for('static', filename='images/favicon/apple-touch-icon-144-precomposed.png') }}" rel="apple-touch-icon" sizes="114x114">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Modernizr Scripts -->
+    <script src="{{ url_for('static', filename='javascript/vendor/modernizr-2.7.1.min.js') }}"></script>
+  </head>
+  <body class="index" id="to-top">
+
+    <!-- Side nav -->
+    <nav class="side-nav" role="navigation">
+
+      <ul class="nav-side-nav">
+        <li><a class="tooltip-side-nav" href="#section-1" title="" data-original-title="Services" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#section-2" title="" data-original-title="Features" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#section-3" title="" data-original-title="Subscribe" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#to-top" title="" data-original-title="Back" data-placement="left"></a></li>
+      </ul>
+      
+    </nav> <!-- /.side-nav -->
+
+
+
+
+    <!-- Jumbotron -->
+    <header class="jumbotron" role="banner">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-7">
+
+            <!-- Logo -->
+            <figure class="text-center">
+              <a href="./">
+                <img class="img-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+              </a>
+            </figure> <!-- /.text-center -->
+
+            <!-- Title -->
+            <h1>Schedule Your Web Chat</h1>
+
+            <!-- Sub title -->
+            <p>Now you can schedule your web chat. Great for remote job interviews, long distance romance, remote teaching course, and more!</p>
+
+            <!-- Button -->
+            <p class="btn-app-store">
+              <a class="btn btn-danger btn-lg" href="#fakelinks">
+                <img src="{{ url_for('static', filename='images/btn-app-store.png') }}" alt="">
+              </a>
+            </p> <!-- /.btn-app-store -->
+
+          </div> <!-- /.col-md-7 -->
+
+          <div class="col-md-5">
+
+            <!-- Images showcase -->
+            <figure>
+              <img class="img-iPhone" src="{{ url_for('static', filename='images/iphone/2.png') }}" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-5 -->
+          
+        </div> <!-- /.row -->
+        
+      </div> <!-- /.container -->
+
+    </header> <!-- /.jumbotron -->
+
+
+
+
+    <!-- Services -->
+    <section class="services-section" id="section-1">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 col-services">
+            
+            <!-- Icons -->
+            <figure>
+              <img class="img-services" src="{{ url_for('static', filename='images/icons/schedule.png') }}" alt="">
+            </figure>
+
+            <!-- Title -->
+            <h4>Scheduled Chat</h4>
+
+            <!-- Description -->
+            <p>Schedule your chat hours, days, or even months in advance. </p>
+
+          </div> <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-services">
+            
+            <!-- Icons -->
+            <figure>
+              <img class="img-services" src="{{ url_for('static', filename='images/icons/alarm.png') }}" alt="">
+            </figure>
+
+            <!-- Title -->
+            <h4>Notification</h4>
+
+            <!-- Description -->
+            <p>Receive upcoming chat event through push notification.</p>
+
+          </div> <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-services">
+            
+            <!-- Icons -->
+            <figure>
+              <img class="img-services img-margin" src="{{ url_for('static', filename='images/icons/world-map.png') }}" alt="">
+            </figure>
+
+            <!-- Title -->
+            <h4>Anywhere</h4>
+
+            <!-- Description -->
+            <p>Chat with anyone, anytime, anywhere...  FREE.</p>
+
+          </div> <!-- /.col-md-4 -->
+          
+        </div> <!-- /.row -->
+        
+      </div> <!-- /.container -->
+      
+    </section> <!-- /.services-section -->
+
+
+
+
+    <!-- Features -->
+    <section class="features-section" id="section-2">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-5 col-features text-center">
+            
+            <!-- Images showcase -->
+            <figure>
+              <img class="img-iPhone" src="{{ url_for('static', filename='images/iphone/1.png') }}" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-5 -->
+
+          <div class="col-md-7 col-features features-content">
+            
+            <!-- Title -->
+            <h3 id="title-1">Built On WebRTC</h3>
+
+            <!-- Description -->
+            <p>SkedChat is built on top of HTML 5 and the all new WebRTC. WebRTC is an API definition that supports browser-to-browser applications for voice calling, video chat, and P2P file sharing without plugins. Currently runs on latest Chrome, Firefox, and Opera.</p>
+
+            <p>
+              <a class="btn btn-danger" href="http://en.wikipedia.org/wiki/WebRTC" target="_blank">Learn more</a>
+            </p>
+
+          </div> <!-- /.col-md-7 -->
+          
+        </div> <!-- /.row -->
+
+
+
+
+        <div class="row media-screen-800">
+
+          <div class="col-md-7 col-features features-content">
+            
+            <!-- Title -->
+            <h3 id="title-2">FREE</h3>
+
+            <!-- Description -->
+            <p>Why wait? Start using SkedChat now, it's FREE.</p>
+
+            <p>
+              <a class="btn btn-danger" href="./Sign-In">Sign In</a> &nbsp;
+              <a class="btn btn-danger-border" href="./Sign-Up">Sign Up</a>
+            </p>
+
+          </div> <!-- /.col-md-7 -->
+
+          <div class="col-md-5 col-features text-center">
+            
+            <!-- Images showcase -->
+            <figure>
+              <img class="img-iPhone margin-top margin-screen-800" src="{{ url_for('static', filename='images/iphone/4.png') }}" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-5 -->
+          
+        </div> <!-- /.row -->
+
+
+
+
+        <div class="row">
+
+          <div class="col-md-5 col-features text-center">
+            
+            <!-- Images showcase -->
+            <figure>
+              <img class="img-iPhone margin-top margin-top-1" src="{{ url_for('static', filename='images/iphone/3.png') }}" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-5 -->
+
+          <div class="col-md-7 col-features features-content">
+            
+            <!-- Title -->
+            <h3 id="title-3">Runs Anywhere</h3>
+
+            <!-- Description -->
+            <p>SkedChat has been tested on servers, desktops, laptops, tablets, smartphone, and even Raspberry Pi! Download the client app for Android now!</p>
+
+            <!-- Button -->
+            <p class="btn-app-store">
+              <a class="btn btn-danger btn-lg" href="#fakelinks">
+                <img src="{{ url_for('static', filename='images/btn-app-store.png') }}" alt="">
+              </a>
+            </p> <!-- /.btn-app-store -->
+
+          </div> <!-- /.col-md-7 -->
+          
+        </div> <!-- /.row -->
+
+      </div> <!-- /.container -->
+
+    </section> <!-- /.features-section -->
+
+
+
+
+    <!-- Subscribe -->
+    <section class="subscribe-section" id="section-3">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <!-- Title -->
+            <h2>Subscribe to get delightfully infrequent updates</h2>
+
+            <!-- Subscribe form -->
+            <div class="row">
+
+              <div class="col-md-6 col-md-offset-3 col-subscribe">
+
+                <form class="subscribe-form form-inline" action="./index.html" role="form">
+
+                  <!-- Input -->
+                  <div class="form-group">
+
+                    <label class="sr-only" for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email address">
+
+                  </div> <!-- /.form-group -->
+
+                  <!-- Button -->
+                  <button class="btn btn-success" type="submit">Subscribe</button>
+                  
+                </form> <!-- /.subscribe-form -->
+
+
+
+                <section class="subscribe-description">
+
+                  <p>Don't worry. We do not spam :)</p>
+                  
+                </section> <!-- /.subscribe-description -->
+                
+              </div> <!-- /.col-md-6 -->
+
+            </div> <!-- /.row -->
+            
+          </div> <!-- /.col-md-12 -->
+          
+        </div> <!-- /.row -->
+
+      </div> <!-- /.container -->
+
+    </section> <!-- /.subscribe-section -->
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer-section" role="contentinfo">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 col-footer">
+            
+            <!-- Footer 1 -->
+            <section>
+              <p>
+			    Gamesbrewer Production.
+	          </p>
+            </section>
+
+            <!-- AddThis Button -->
+            <ul class="addthis_toolbox addthis_default_style">
+
+              <li><a class="addthis_button_facebook_like"></a></li>
+              <li><a class="addthis_button_tweet"></a></li>
+
+            </ul> <!-- /.addthis_toolbox -->
+            <script>var addthis_config = {"data_track_addressbar":true};</script>
+            <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5389a5fc7e423382"></script>
+          </div> <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-footer col-padding">
+            
+            <!-- Footer 1 -->
+            <section class="text-center">
+              <p>Be sure to read <a href="#fakelinks">Terms</a> and <a href="#fakelinks">Privacy Policy</a>.</p>
+            </section>
+
+            <!-- Social media links -->
+            <ul class="social-media-links">
+
+              <li><a class="fa fa-twitter tw" href="#fakelinks"></a></li>
+              <li><a class="fa fa-facebook fb" href="#fakelinks"></a></li>
+              <li><a class="fa fa-google-plus pn" href="#fakelinks"></a></li>
+              
+            </ul> <!-- /.social-media-links -->
+
+          </div> <!-- /.col-md-4 -->
+
+          <div class="col-md-4 col-footer">
+            
+            <!-- Footer 1 -->
+            <section>
+              <p><strong>Tolipon Inc</strong> <br>Office No 1123, Some Street, <br> 89500 Kota Kinabalu, <br> Sabah, Malaysia.</p>
+            </section>
+
+          </div> <!-- /.col-md-4 -->
+          
+        </div> <!-- /.row -->
+
+      </div> <!-- /.container -->
+
+    </footer> <!-- /.footer-section -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ url_for('static', filename='javascript/vendor/jquery-2.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/assets/application.js') }}"></script>
+  </body>
+</html>

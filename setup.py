@@ -13,19 +13,19 @@ def read(fname):
 
 setup(
     name = "Kegger",
-    version = "0.5.0",
+    version = "0.6.0",
     author = "Jonathan Ho",
     author_email = "sabahgamemaker@gmail.com",
     description = ("Framework(s) on GAE aka Kegger because a Keg is like a bunch of Flask and Bottle"),
     license = "Common Creative 1.0",
-    keywords = "Framework GAE GoogleAppEngine Flask",
+    keywords = "Framework GAE GoogleAppEngine Flask Bottle Pyramid",
     url = "http://www.gamesbrewer.com/kegger",
     packages=find_packages(),
     scripts=['kegger/kegger.py'],
     include_package_data=True,
     long_description=read('README.txt'),
     classifiers=[
-        "Development Status :: 0.5.0 - Beta",
+        "Development Status :: 0.6.0 - Beta",
         "Topic :: Utilities",
         "License :: OSI Approved :: Common Creative 1.0",
     ],
